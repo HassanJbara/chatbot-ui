@@ -62,7 +62,7 @@ import InlineSvg from "vue-inline-svg";
           <p class="text-sm font-bold capitalize">false</p>
 
           <div
-            class="tooltip tooltip-right capitalize"
+            class="tooltip tooltip-top capitalize"
             data-tip="Our tool should help you be aware of the lack of context and unreliability of information you see online."
           >
             <p class="text-xs italic font-semibold">

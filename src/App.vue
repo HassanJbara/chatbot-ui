@@ -2,7 +2,7 @@
 import { ChatDemoView, TweetDemoView } from "@/views";
 import { ref } from "vue";
 
-const firstDemo = ref(false);
+const firstDemo = ref(true);
 </script>
 
 <template>

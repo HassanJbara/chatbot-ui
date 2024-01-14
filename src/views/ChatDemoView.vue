@@ -44,6 +44,8 @@ const getMessageTextColor = (evaluationValue: string | null) => {
 const userInput = ref("");
 
 function userSendInput() {
+  if (!userInput.value) return;
+
   loading.value = true;
   // const tmp = userInput.value;
 
@@ -149,7 +151,7 @@ const getEvaluationIcon = (evaluationValue: string | null) => {
               </p>
 
               <div
-                class="tooltip tooltip-right capitalize"
+                class="tooltip tooltip-top capitalize"
                 data-tip="AI models have bias and inaccuracies. Our LLM evaluation should help you be more aware of the mistakes AI systems make!"
               >
                 <p class="text-xs italic font-semibold">
