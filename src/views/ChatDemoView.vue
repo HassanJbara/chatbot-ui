@@ -15,7 +15,7 @@ const messages = ref<
   }[]
 >([]);
 
-const getMessageColor = (evaluationValue: string | null) => {
+const getMessageColor = (evaluationValue: string) => {
   switch (evaluationValue) {
     case "false":
       return "bg-[#d64933]";
@@ -28,7 +28,7 @@ const getMessageColor = (evaluationValue: string | null) => {
   }
 };
 
-const getMessageTextColor = (evaluationValue: string | null) => {
+const getMessageTextColor = (evaluationValue: string) => {
   switch (evaluationValue) {
     case "false":
       return "text-white";
@@ -74,7 +74,7 @@ function userSendInput() {
   });
 }
 
-const getEvaluationIcon = (evaluationValue: string | null) => {
+const getEvaluationIcon = (evaluationValue: string) => {
   switch (evaluationValue) {
     case "false":
       return "/icons/cross.svg";
@@ -135,7 +135,7 @@ const getEvaluationIcon = (evaluationValue: string | null) => {
             tabindex="0"
             class="collapse collapse-arrow mt-1 overflow-visible"
             :class="getMessageColor(message.evaluationValue)"
-            v-if="message.evaluationValue"
+            v-if="message.evaluationValue !== null"
           >
             <div
               class="collapse-title flex flex-row items-center gap-2 overflow-visible"
